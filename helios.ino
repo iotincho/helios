@@ -11,11 +11,12 @@ void setup()
   buzzer.setup();
   rightLamp.setup();
   leftLamp.setup();
+  delay(120000);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   rightLamp.verify_whit_engine_on();
-  rightLamp.verify_whit_engine_on();
+  leftLamp.verify_whit_engine_on();
 
 }
