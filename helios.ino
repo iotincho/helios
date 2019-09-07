@@ -2,16 +2,20 @@
 #include "perifericos.h"
 #include "actuadores.h"
 
-Buzzer buzzer = Buzzer(BEEP_PIN);
-Lamp  rightLamp = Lamp(RIGHT_LAMP,buzzer);
-Lamp  leftLamp = Lamp(LEFT_LAMP,buzzer);
+Buzzer buzzer       = Buzzer(BEEP_PIN);
+Lamp  rightLowBeam  = Lamp(RIGHT_LOW_BEAM,buzzer);
+Lamp  leftLowBeam   = Lamp(LEFT_LOW_BEAM,buzzer);
+Lamp  rightHighBeam = Lamp(RIGH_HIGH_BEAM,null);
+Lamp  leftHighBeam  = Lamp(LEFT_HIGH_BEAM,null);
 
 void setup()
 {
   buzzer.setup();
-  rightLamp.setup();
-  leftLamp.setup();
-  delay(120000);
+  rightLowBeam.setup();
+  leftLowBeam.setup();
+  leftHighBeam.setup();
+  rightHighBeam.setup();
+  delay(40000);
 }
 
 void loop() {
